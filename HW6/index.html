@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans+Caption" rel="stylesheet">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: 'PT Sans Caption', sans-serif;
+        }
+        body {
+            width: 100%;
+            height: 100%;
+        }
+        form, .forOrderList, #count {
+            margin: 1%;
+            width: 50%;
+        }
+        input, p, select, button {
+            margin: 1% 2%;
+            width: 92%;
+        }
+        fieldset {
+            padding: 1%;
+            width: 48%;
+        }
+
+        .butt {
+            height: 50px;
+            background: #FF9800;
+            font-size: 1.5em;
+            color: white;
+        }
+
+        .exclusiveGood {
+            display: none;
+        }
+
+        .orderList input, .orderList input:focus {
+            border: none;
+        }
+
+    </style>
+</head>
+<body>
+
+    <form name="goodsOrder" class="goodsOrder">
+        <fieldset>
+                <legend>
+                    Общие
+                </legend>
+                <p>Дата заказа</p>
+                <input title="goodsOrder" type="date" id="data-order">
+
+                <p>Номер мобильного телефона заказчика </p>
+                <input title="goodsOrder" type="tel" class="data-order">
+
+                <p>ФИО заказчика</p>
+                <input type="text" title="goodsOrder" class="data-order">
+        </fieldset>
+        <fieldset>
+                <legend>
+                    Транспортировка
+                </legend>
+                <p>Номер мобильного телефона получателя </p>
+                <input type="tel" title="goodsOrder" class="data-order">
+
+                <p>Грузоперевозчик</p>
+                <select title="goodsOrder" id="transporter" size="1" class="data-order">
+                    <option>Выбрать перевозчика</option>
+                    <option value="Новая почта">Новая почта</option>
+                    <option value="Интайм">Интайм</option>
+                    <option value="Автолюкс">Автолюкс</option>
+                    <option value="Почта Украины">Почта Украины</option>
+                </select>
+
+                <p>Город доставки</p>
+                <input title="goodsOrder" type="text" class="data-order">
+
+                <p>Дата отгрузки</p>
+                <input title="goodsOrder" type="date" class="data-order">
+        </fieldset>
+
+        <fieldset class="innerGoods">
+                <legend>
+                    Товар
+                </legend>
+                <p>Тип товара</p>
+                <select title="goodsOrder" class="check data-order" size="1">
+                    <option disabled>Выбрать тип товара</option>
+                    <option value="Стандарт">Стандарт</option>
+                    <option value="Эксклюзив">Эксклюзив</option>
+                </select>
+                <div class="exclusiveGood" id="exclusive">
+
+                    <p>Название</p>
+                    <input title="goodsOrder" type="text" class="data-order">
+
+                    <p>Фото</p>
+                    <input title="goodsOrder" type="file" class="data-order">
+                    <p>Рабочая среда</p>
+                    <select title="goodsOrder" size="1" class="data-order">
+                        <option disabled>Рабочая среда</option>
+                        <option value="Воздух">Воздух</option>
+                        <option value="Вода">Вода</option>
+                        <option value="Металл">Металл</option>
+                    </select>
+                    <p>Диаметр</p>
+                    <input title="goodsOrder" type="number" class="data-order">
+                    <p>Материал</p>
+                    <input title="goodsOrder" type="text" class="data-order">
+                </div>
+                <p>Цена</p>
+                <input title="goodsOrder" type="number" class="data-order forsum">
+                <p>Количество товара</p>
+                <input title="goodsOrder" type="number" class="data-order forsum">
+                <input type="button" class="butt" id="addGood" value="Добавить товар">
+        </fieldset>
+    </form>
+    <input type="button" class="butt" id="count" value="Посчитать сумму">
+
+    <form class="forOrderList">
+        <h1>Заказ</h1>
+    </form>
+
+<script src="script.js"></script>
+</body>
+</html>

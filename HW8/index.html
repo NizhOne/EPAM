@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Города</title>
+    <style>
+        body {
+            width: 100%;
+            height: 100%;
+        }
+        form {
+            width: 30%;
+        }
+        input {
+            padding: 1%;
+            width: 98%;
+        }
+
+        #add, #surrender {
+            width: 100%;
+            background: yellow;
+        }
+    </style>
+</head>
+<body>
+    <form id="tableForTowns">
+
+    </form>
+    <form id="addTown">
+        <fieldset>
+            <legend>
+                Введите город
+            </legend>
+            <input type="text" placeholder="Город">
+            <input type="button" id="add" value="Добавить город">
+            <input type="button" id="surrender" value="Сдаться">
+        </fieldset>
+    </form>
+    <script src="script.js"></script>
+</body>
+</html>
